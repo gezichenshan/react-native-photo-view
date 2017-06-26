@@ -25,7 +25,7 @@ export default class PhotoView extends Component {
                 <TouchableWithoutFeedback
                     onPress={this.props.onTap ? this.props.onTap : function() {}}>
                     {!this.state.loaded?
-                        <TouchableOpacity {...this.props}>
+                        <TouchableOpacity {...this.props} onPress={this.props.onTap ? this.props.onTap : function() {}}>
                             <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
                                 <ActivityIndicator/>
                             </View>
